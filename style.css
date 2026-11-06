@@ -1,0 +1,279 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8ed;
+    color: #263b32;
+    transition: .3s;
+}
+
+body.dark {
+    background: #172820;
+    color: white;
+}
+
+header {
+    background: #245c43;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    background: #f6a94b;
+    color: #263b32;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 380px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dcebd9;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.hero img {
+    width: 300px;
+    max-width: 40%;
+    border-radius: 30px;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.search {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 13px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.product {
+    background: white;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000010;
+    color: #263b32;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 17px;
+}
+
+.product-content h3 {
+    margin-bottom: 9px;
+}
+
+.price {
+    color: #e58c32;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.product button {
+    width: 100%;
+}
+
+.cart-area {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+}
+
+.panel {
+    background: white;
+    color: #263b32;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px #00000010;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    padding: 7px 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0;
+}
+
+.full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.result {
+    background: #245c43;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+.history-item {
+    padding: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background: #245c43;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.dark .panel,
+.dark .product {
+    background: #294536;
+    color: white;
+}
+
+.dark .hero {
+    background: #294536;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero img {
+        max-width: 90%;
+        width: 260px;
+    }
+
+    .cart-area,
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    }
+    .tombol-wa {
+        background-color: #25D366;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        display: inline-block;
+    }

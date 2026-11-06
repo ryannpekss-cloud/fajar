@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDrink - Minuman Segar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🥤 FreshDrink</div>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#cart">Keranjang</a>
+        <a href="#kalkulator">Kalkulator</a>
+        <a href="#riwayat">Riwayat</a>
+        <a href="https://wa.me/6285332240998" target="_blank">
+                Hubungi Kami via WhatsApp
+        <a href="https://wa.me/6285332240998"
+           target="_blank"
+           class="whatsapp">
+            Chat WhatsApp
+
+    <style>
+        .whatsapp {
+        background: #25D366;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+}
+    </style>
+        </a>
+        <button onclick="toggleDark()">🌙</button>
+         
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-text">
+        <p>🌿 FRESH • HEALTHY • DELICIOUS</p>
+        <h1>Kesegaran di Setiap Tegukan!</h1>
+        <p>
+            Nikmati berbagai pilihan minuman segar
+            dengan harga ramah di kantong.
+            Cocok menemani aktivitas sehari-hari.
+        </p>
+        <button onclick="location.href='#menu'">
+            Pesan Sekarang →
+        </button>
+    </div>
+
+    <img
+        src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600"
+        alt="Minuman segar">
+</div>
+
+<section id="menu">
+    <div class="section-title">
+        <h2>🍹 Menu Favorit</h2>
+        <p>Pilih minuman kesukaanmu!</p>
+    </div>
+
+    <input
+        class="search"
+        id="search"
+        placeholder="🔎 Cari minuman..."
+        oninput="renderProducts()">
+
+    <div class="products" id="products"></div>
+</section>
+
+<section id="cart">
+    <div class="section-title">
+        <h2>🛒 Keranjang Belanja</h2>
+        <p>Periksa pesanan sebelum checkout.</p>
+    </div>
+
+    <div class="cart-area">
+        <div class="panel">
+            <h3>Daftar Pesanan</h3>
+            <div id="cartItems"></div>
+        </div>
+
+        <div class="panel">
+            <h3>Ringkasan Pembayaran</h3>
+
+            <input id="promo" placeholder="Kode promo: FRESH10">
+
+            <button onclick="applyPromo()">Gunakan Promo</button>
+
+            <div class="total">
+                <span>Subtotal</span>
+                <b id="subtotal">Rp0</b>
+            </div>
+
+            <div class="total">
+                <span>Diskon</span>
+                <b id="discount">Rp0</b>
+            </div>
+
+            <hr>
+
+            <div class="total">
+                <b>Total Bayar</b>
+                <b id="total">Rp0</b>
+            </div>
+
+            <label>Nomor WhatsApp Penjual</label>
+            <input
+                id="phone"
+                type="tel"
+                value="6285332240998"
+                placeholder="Nomor WhatsApp penjual">
+
+            <button class="full" onclick="checkout()">
+                Checkout WhatsApp
+            </button>
+
+            <button class="full" onclick="clearCart()">
+                Kosongkan Keranjang
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="kalkulator">
+    <div class="section-title">
+        <h2>📊 Kalkulator Keuntungan</h2>
+        <p>Hitung keuntungan penjualan minumanmu.</p>
+    </div>
+
+    <div class="panel">
+        <div class="calc-grid">
+            <div>
+                <label>Modal Awal (Rp)</label>
+                <input type="number" id="modal" value="100000">
+            </div>
+
+            <div>
+                <label>Biaya Operasional (Rp)</label>
+                <input type="number" id="biaya" value="50000">
+            </div>
+
+            <div>
+                <label>Jumlah Gelas Terjual</label>
+                <input type="number" id="jumlah" value="20">
+            </div>
+
+            <div>
+                <label>Harga Jual Per Gelas (Rp)</label>
+                <input type="number" id="harga" value="10000">
+            </div>
+        </div>
+
+        <button onclick="calculate()">Hitung Keuntungan</button>
+
+        <div class="result">
+            <p>Modal Awal: <b id="rModal">Rp100.000</b></p>
+            <p>Omzet: <b id="omzet">Rp0</b></p>
+            <p>Biaya: <b id="rBiaya">Rp0</b></p>
+            <h3>Laba Bersih: <span id="laba">Rp0</span></h3>
+        </div>
+    </div>
+</section>
+
+<section id="riwayat">
+    <div class="section-title">
+        <h2>📋 Riwayat Pesanan</h2>
+        <p>Daftar transaksi yang pernah dilakukan.</p>
+    </div>
+
+    <div class="panel">
+        <div id="history"></div>
+        <button onclick="clearHistory()">Hapus Riwayat</button>
+    </div>
+</section>
+
+<footer>
+    <h2>🥤 FreshDrink</h2>
+    <p>Segar, Nikmat, dan Bersahabat.</p>
+    <p>WhatsApp: 6285332240998</p>
+    <p>© 2026 FreshDrink. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
